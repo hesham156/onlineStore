@@ -15,14 +15,16 @@ const Login = () => {
     clientId= "377316420785-rkcjm8tut58icdbkenblo56oqqra54re.apps.googleusercontent.com"
     buttonText=""
     onSuccess={responseGoogle}
+    
     onFailure={responseGoogle}
     cookiePolicy={'single_host_origin'}
-    
+
   
   />
   </div>
     </div>
   )
+
 } 
 
 export default Login
