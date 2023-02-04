@@ -14,7 +14,13 @@ const Nave = () => {
           </div>
           <div className='lnks w-25'>
           <AiOutlineShoppingCart/>
-          <FaUserCircle/>
+          <div className='usericon'>
+            <div className='icon'>
+            <FaUserCircle/>
+            </div>
+             <p>MY Account</p>
+             <p>Login</p>
+          </div>
           </div>
       </div>
       <div className='container categor'>
