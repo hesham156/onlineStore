@@ -17,6 +17,36 @@
 .logo img{
   width: 100%;
 }
+nav.nave {
+  height: auto;
+  min-height: 60px;
+  background: #f5b242;
+  padding-top: 5px;
+
+}
+nav .naveTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.naveTop.w-100 div {
+  width: 100%;
+}
+ul{
+  list-style: none;
+}
+.user ul,.category ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0 !important;
+} 
+.user ul li,.category ul li{
+  margin: 10px;
+}
+.user ul li a,.category ul li a{
+  text-decoration: none;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
