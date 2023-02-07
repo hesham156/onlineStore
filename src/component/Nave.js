@@ -1,10 +1,19 @@
 import React from 'react'
-import  logo from '../asset/img/logo.png'
-import {AiOutlineShoppingCart} from 'react-icons/ai'
-import {FaUserCircle} from 'react-icons/fa'
+
 const Nave = () => {
   return (
-    <nav className='nave'>Nave</nav>
+    <nav className='nave w-100'>
+      <div className='container'>
+        <div className='naveTop w-100'>
+          <div className='logo'></div>
+          <div className='search'></div>
+          <div className='user'></div>
+          </div>
+          <div className='naveBottom w-100'>
+            <div className='category'></div>
+          </div>
+      </div>
+    </nav>
   )
 }
 
