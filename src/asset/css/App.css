@@ -32,6 +32,11 @@ nav .naveTop {
 .naveTop.w-100 div {
   width: 100%;
 }
+footer{
+  height: auto;
+  min-height: 100px;
+  background-color: #f5b242;
+}
 ul{
   list-style: none;
 }
@@ -46,6 +51,10 @@ ul{
 }
 .user ul li a,.category ul li a{
   text-decoration: none;
+}
+.section{
+  height: auto;
+  min-height: 50vh;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
