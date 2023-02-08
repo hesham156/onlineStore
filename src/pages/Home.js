@@ -19,11 +19,14 @@ const Home = () => {
     <div className='home'>
         <Nave/>
             <Routes>
-                <Route path='product/:id' element={<Product/>}/>
+                  <Route path='/' element={<>
+                        <ImgSlider imgs={imgs}/>
+                        <Category/>
+                        <ProductSlider/>
+                </>}/>
+                    <Route path='product/:id' element={<Product/>}/>
             </Routes>
-            <ImgSlider imgs={imgs}/>
-            <Category/>
-            <ProductSlider/>
+           
         <Footer/>
     </div>
   )

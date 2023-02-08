@@ -32,6 +32,37 @@ nav .naveTop {
 .naveTop.w-100 div {
   width: 100%;
 }
+.search form {
+  border-radius: 10px;
+    background: white;
+}
+.search form input{
+  width: 90%;
+    border: 0;
+    padding: 10px;
+    border-right: 1px solid black;
+    border-radius: 10px 0 0 10px;
+}
+.cart::before{
+  content: attr(data-index);
+  background: black;
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: wheat;
+}
+.search form button{
+  width: 10%;
+    padding: 10px;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    background: white;
+}
 footer{
   height: auto;
   min-height: 100px;
