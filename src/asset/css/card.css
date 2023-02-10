@@ -1,0 +1,36 @@
+.productCard {
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    margin: 0 10px;
+
+    border-radius: 15px;
+}
+.proImgs {
+    display: flex;
+    height: 255px;
+    display: flex;
+    align-items: center;
+}
+.productImg {
+    min-width: 225px;
+    margin: 0 15px;
+}
+.productTop {
+    overflow: hidden;
+}
+button.addToCard {
+    width: 100%;
+    border-radius: 10px;
+    background: #f5b242;
+    border: 0;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.addToCard:hover{
+    box-shadow: rgb(245 178 66) 0px 2px 8px 0px;
+
+}

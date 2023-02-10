@@ -9,7 +9,7 @@ const Nave = () => {
         <div className='naveTop w-100'>
           <div className='logo'><h2>MRROBOT</h2></div>
           <div className='search'><form><input type="text" placeholder='Search'/><button> <FaSearch/></button></form></div>
-          <div className='user'><ul><li><a href='#'>cart</a></li><li><a href='#'><AiOutlineUser/></a></li><li><a href='#' className='cart' data-index={cardIndex}><AiOutlineShoppingCart/></a></li></ul></div>
+          <div className='user'><ul><li><a href='#'>cart</a></li><li><a href='#'><AiOutlineUser/></a></li><li><a href='#' className={(cardIndex>9?"p-20":'p-10')+' cart'}  data-index={cardIndex}><AiOutlineShoppingCart/></a></li></ul></div>
           </div>
           <div className='naveBottom w-100'>
             <div className='category'>
