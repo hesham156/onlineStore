@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../asset/css/card.css'
 const ProductCard = ({data}) => {
   console.log(data)
+  const [active,setActive] = useState(0)
+  const [proimg,setproimg] = useState(0)
+
+  const chose = (e)=>{
+    
+               e.target.classList.add('activateSpan')
+  }
+  
 
  
         return(
        <div className='productCard'>
              <div className='container'>
                 <div className='productTop'>
-                  <div className='proImgs'>
+                     <div style={proimg===0?{transform:'translate(0,0)'}:{transform:'translate(-250px,0)'}} className='proImgs'>
                   {data.imgs?.map((img)=>{
                  return(
                   <div className='productImg'>
@@ -17,13 +25,20 @@ const ProductCard = ({data}) => {
                  )
 
                   })}
-                     </div>
+                       </div>
+                       <div className='center sBtn'>
+                                      {data.imgs?.map((img)=>{
+                                        return <span onClick={(e)=>{setActive(data.imgs.indexOf(img));setproimg(data.imgs.indexOf(img))}} className={active===data.imgs.indexOf(img)?'activateSpan':''}></span>
+
+                                      })}                                                                                                                                
+                      
+                       </div>
                      <div className='proTitle'>
                          <h2>{data.title}</h2>
-                     </div>
+                       </div>
                      <div className='proPrice'>
                       <p>{data.price} </p>
-                     </div>
+                      </div>
                 </div>
                 <div className='productBottom'>
                   <button className='addToCard'>Add To Card</button>
