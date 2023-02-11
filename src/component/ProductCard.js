@@ -14,10 +14,15 @@ const ProductCard = ({data}) => {
  
         return(
        <div className='productCard'>
+         <div className='gradiant'>
+                  <div class="gradient behind" color="blue"></div>
+                  </div>
              <div className='container'>
-                <div className='productTop'>
-                     <div style={proimg===0?{transform:'translate(0,0)'}:{transform:'translate(-250px,0)'}} className='proImgs'>
+                <div className='productTop'>  
+                  <h1>{data.type}</h1>
+                    <div style={proimg===0?{transform:'translate(0,0)'}:{transform:`translate(-${proimg*256}px,0)`}} className='proImgs'>
                   {data.imgs?.map((img)=>{
+                  
                  return(
                   <div className='productImg'>
                       <img width='100%' src={img}/>
@@ -26,17 +31,17 @@ const ProductCard = ({data}) => {
 
                   })}
                        </div>
-                       <div className='center sBtn'>
+                    <div className='center sBtn'>
                                       {data.imgs?.map((img)=>{
                                         return <span onClick={(e)=>{setActive(data.imgs.indexOf(img));setproimg(data.imgs.indexOf(img))}} className={active===data.imgs.indexOf(img)?'activateSpan':''}></span>
 
                                       })}                                                                                                                                
                       
                        </div>
-                     <div className='proTitle'>
+                    <div className='proTitle'>
                          <h2>{data.title}</h2>
                        </div>
-                     <div className='proPrice'>
+                    <div className='proPrice'>
                       <p>{data.price} </p>
                       </div>
                 </div>
