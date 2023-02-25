@@ -6,8 +6,16 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Index from './dashBoard/Index';
+import { gapi } from "gapi-script";
 
 function App() {
+  gapi.load("client:auth2", () => {
+    gapi.client.init({
+      clientId:
+        "377316420785-rkcjm8tut58icdbkenblo56oqqra54re.apps.googleusercontent.com",
+      plugin_name: "chat",
+    });
+  });
   return (
     <div className="App">
     <ToastContainer/>

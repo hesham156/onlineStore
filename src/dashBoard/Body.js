@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import TopNave from './commponent/TopNave'
 import Customer from './pages/Customer'
 import Home from './pages/Home'
 import Products from './pages/Products'
@@ -7,6 +8,7 @@ import Products from './pages/Products'
 const Body = () => {
   return (
     <div className='body'>
+      <TopNave/>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='products' element={<Products/>}/>
