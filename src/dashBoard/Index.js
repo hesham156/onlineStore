@@ -6,18 +6,18 @@ import './asset/css/dash.css'
 import './asset/css/body.css'
 import Login from '../pages/Login'
 const Index = () => {
-  const [admin,setAdmin]=useState()
+  const [admin,setAdmin]=useState([])
   useEffect(()=>{
-    setAdmin(localStorage.getItem('hesham'))
+    setAdmin(JSON.parse(localStorage.getItem('admin'))||"dd")
     
   },[])
   return (
     <>
-    {admin?
+    {admin!=="dd"?
     <div className='dashboard'>
         <SideNave/>
         <Body/>
-    </div>:<Login/>}
+    </div>:<Login redirect="/admin/customer" path={document.location.pathname}/>}
     </>
   )
 }

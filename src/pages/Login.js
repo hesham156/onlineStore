@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import {GoogleLogin} from '@leecheuk/react-google-login'
+import { useNavigate } from 'react-router-dom'
 
 
-const Login = () => {
+const Login = ({redirect ,path}) => {
+  const goTo = useNavigate()
   const responseGoogle = (response) => {
-     console.log(response)
+    localStorage.removeItem('admin')
+    localStorage.setItem('admin',JSON.stringify(response))
+    toast.success("Login")
+    goTo(redirect,{replace:true})
+    window.location.reload()
   }
   return (
     <div className='login' >

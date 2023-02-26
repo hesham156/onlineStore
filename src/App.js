@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Index from './dashBoard/Index';
 import { gapi } from "gapi-script";
-
+import 'rsuite/dist/rsuite.min.css';
 function App() {
   gapi.load("client:auth2", () => {
     gapi.client.init({
