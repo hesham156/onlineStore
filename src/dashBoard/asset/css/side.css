@@ -4,3 +4,19 @@
     width: 300px;
     background: #16263f;
 }
+.rs-sidenav-inverse, .rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle, .rs-sidenav-inverse .rs-dropdown-item-submenu:hover>.rs-dropdown-item-toggle, .rs-sidenav-inverse .rs-sidenav-item, .rs-sidenav-inverse .rs-sidenav-toggle-button {
+    /* background-color: #01182f; */
+    background-color: #03284f !important;
+}
+nav.rs-sidenav.rs-sidenav-inverse {
+    height: 100vh !important;
+}
+.rs-sidenav-collapse-in {
+    width: 25% !important;
+}
+@media (max-width:900px) {
+    .rs-sidenav-collapse-in {
+        width: 100% !important;
+    }
+    
+}

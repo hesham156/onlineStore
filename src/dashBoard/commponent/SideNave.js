@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {FiUsers} from 'react-icons/fi'
@@ -8,10 +8,12 @@ import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
 import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
+import '../asset/css/side.css'
 const SideNave = () => {
+  const [expanded, setExpand] = useState(true);
+
   return (
-    <div style={{ width: 25+'%',height:100+'vh',background:'#f7f7fa' }}>
-    <Sidenav defaultOpenKeys={['3', '4']}>
+    <Sidenav expanded={expanded} appearance="inverse" defaultOpenKeys={['3', '4']}>
       <Sidenav.Body>
         <Nav activeKey="1">
           <Nav.Item eventKey="1" icon={<DashboardIcon />}>
@@ -37,8 +39,9 @@ const SideNave = () => {
           </Nav.Menu>
         </Nav>
       </Sidenav.Body>
+      <Sidenav.Toggle onToggle={setExpand} />
+
     </Sidenav>
-  </div>
   )
 }
 

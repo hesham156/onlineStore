@@ -8,6 +8,7 @@ import Products from './pages/Products'
 const Body = () => {
   return (
     <div className='body'>
+      <div className='container'>
       <TopNave/>
         <Routes>
             <Route path='/' element={<Home/>}/>
@@ -15,6 +16,7 @@ const Body = () => {
             <Route path='customer' element={<Customer/>}/>
 
         </Routes>
+    </div>
     </div>
   )
 }
